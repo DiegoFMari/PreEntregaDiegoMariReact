@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+.App{
+  background-color: rgb(255, 186, 37);
+  height: 110px;
+  border: 2px black solid;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.divNavBar{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.divNavBar h3{
+  font-style: oblique;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 80px;
+  font-size: x-large;
+}
+
+.divNavBar img{
+  width: 100px;
+  height: 100px;
+
+}
+
+.divLogoSlogan{
+  display: flex;
+}
+
+.buttonNavBar{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60%;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+button{
+  border: 2px solid black;
+  border-radius: 6px;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carrito img{
+  width: 70px;
+  height: 70px;
+
+}
+
+
+.divSaludo{
+  text-align: center;
+  transition:all.2s;
+}
+.divSaludo h1{
+  transform: translate(30px, 50px );
 }
