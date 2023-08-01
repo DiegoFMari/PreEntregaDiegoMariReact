@@ -5,8 +5,11 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+      <div className='body'>
       <ItemListContainer saludo={"HOLA MUNDO!!!"}/>
+      </div>
     </div>
+
   );
 }
 

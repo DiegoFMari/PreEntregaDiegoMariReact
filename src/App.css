@@ -4,6 +4,10 @@
   border: 2px black solid;
 }
 
+html{
+  background-color: rgb(168, 85, 85);
+}
+
 .divNavBar{
   display: flex;
   justify-content: space-between; 
@@ -45,6 +49,14 @@ button{
 
 }
 
+.carrito{
+  font-size: medium;
+}
+
+.divCarrito{
+  display: flex;
+  margin: 20px;
+}
 
 .divSaludo{
   text-align: center;
