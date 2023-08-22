@@ -1,9 +1,30 @@
-const ItemListContainer = ({saludo})=>{
-    return (
-        <div className="divSaludo">
-            <h1>{saludo}</h1>
-        </div>
-    )
-}
+import { useState, useEffect } from "react";
+import { getProducts, getProductsByCategory } from "../../asyncMock";
+import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
-export default ItemListContainer
+const ItemListContainer = ({ greeting }) => {
+  const [productos, setProductos] = useState([]);
+  const { categoryID } = useParams();
+
+  useEffect(() => {
+    const asyncFunc = categoryID ? getProductsByCategory : getProducts;
+
+    asyncFunc(categoryID)
+      .then((response) => {
+        setProductos(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, [categoryID]);
+
+  return (
+    <div>
+      <h1>{greeting}</h1>
+      <ItemList productos={productos} />
+    </div>
+  );
+};
+
+export default ItemListContainer;

@@ -1,67 +1,153 @@
-.App{
+.App {
   background-color: rgb(255, 186, 37);
   height: 110px;
   border: 2px black solid;
 }
 
-html{
+html {
   background-color: rgb(168, 85, 85);
 }
 
-.divNavBar{
+.divNavBar {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
-.divNavBar h3{
+.divNavBar h3 {
   font-style: oblique;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 80px;
   font-size: x-large;
 }
 
-.divNavBar img{
+.divNavBar img {
   width: 100px;
   height: 100px;
 
 }
 
-.divLogoSlogan{
+.divLogoSlogan {
   display: flex;
 }
 
-.buttonNavBar{
+.buttonNavBar {
   display: flex;
   align-items: center;
   width: 60%;
   justify-content: space-between;
 }
 
-button{
+button {
   border: 2px solid black;
   border-radius: 6px;
- 
+
 }
 
-.carrito img{
+.carrito img {
   width: 70px;
   height: 70px;
 
 }
 
-.carrito{
+.carrito {
   font-size: medium;
 }
 
-.divCarrito{
+.divCarrito {
   display: flex;
   margin: 20px;
+  font-size: large;
 }
 
-.divSaludo{
+.h4Carrito{
+  background-color: white;
+  border-radius: 10px;
+  width: 20px;
   text-align: center;
-  transition:all.2s;
+  border: 2px solid black;
 }
-.divSaludo h1{
-  transform: translate(30px, 50px );
+.divCarrito img{
+  width: 50%;
+}
+
+
+
+.divSaludo {
+  text-align: center;
+  transition: all.2s;
+}
+
+.divSaludo h1 {
+  transform: translate(30px, 50px);
+}
+
+
+.ItemDiv {
+  display: flex;
+  background-color: gray;
+  border: 4px solid black;
+  border-radius: 8px;
+  justify-content: space-evenly;
+  max-width: 30%;
+  align-items: center;
+  margin: 2px;
+}
+
+.ItemDivImg img {
+  width: 350px;
+  height: 350px;
+  border-bottom: 2px solid black;
+}
+
+.ItemDivCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.ItemListDiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ItemDivText{
+  text-align: center;
+}
+
+.BotoneraCounter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BotoneraCounter :hover{
+  cursor: pointer;
+  background-color: gold;
+  font-size: large;
+  border-radius: 20px;
+}
+
+.divDetail{
+  background-color: red;
+  color: blue;
+  border: 2px solid white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.DetailOption{
+  background-color: white;
+  color: black;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+
+.DetailOption :hover{
+  cursor: pointer;
+  background-color: gold;
+  font-size: large;
+  border-radius: 20px;
 }
