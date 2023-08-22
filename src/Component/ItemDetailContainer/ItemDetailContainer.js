@@ -1,47 +1,27 @@
-import { useState, useEffect } from "react";
-import { productoDetalleId, getProducts } from "../../asyncMock";
-import { useParams } from "react-router-dom";
-import ItemDetail from "../ItemDetail/ItemDetail"; // Importa el componente ItemDetail
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { productoDetalleId } from '../../asyncMock';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
-  const { productoId } = useParams();
+  const { itemId } = useParams();
 
-useEffect(() => {
-    const asyncFunc = productoId ? productoDetalleId : getProducts;
-
-    asyncFunc(productoId)
+  useEffect(() => {
+    productoDetalleId(itemId)
       .then((response) => {
         setProducto(response);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [productoId]);
+  }, [itemId]);
+
   return (
     <div className="ItemDetailContainer">
-      <ItemDetail productoId={producto} />
+      <ItemDetail producto={producto} />
     </div>
   );
 };
 
 export default ItemDetailContainer;
-
-
-// useEffect(() => {
-//     productoDetalleId(productoId)
-//       .then((response) => {
-//         console.log(response); // Agrega este console.log para verificar la respuesta
-//         setProducto(response);
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//       });
-//   }, [productoId]);
-
-//   return (
-//     <div className="ItemDetailContainer">
-//       {producto && <ItemDetail {...producto} />}
-//     </div>
-//   );
-// };

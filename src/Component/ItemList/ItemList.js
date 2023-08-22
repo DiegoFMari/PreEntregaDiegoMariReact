@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from '../Item/Item';
 
-const ItemList = ({ productos }) => {
+const ItemList = ({ productos,}) => {
   return (
     <div className="ItemListDiv">
       {productos.map((prod) => (
@@ -12,6 +12,7 @@ const ItemList = ({ productos }) => {
           modelo={prod.modelo}
           precio={prod.precio}
           stock={prod.stock}
+          id={prod.id}
         />
       ))}
     </div>

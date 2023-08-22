@@ -9,7 +9,7 @@ const productos =[
         "stock": 15,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -22,7 +22,7 @@ const productos =[
         "stock": 10,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -35,7 +35,7 @@ const productos =[
         "stock": 8,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -47,8 +47,8 @@ const productos =[
         "precio": 800000,
         "stock": 4,
         "initial": 1,
-           "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "tipo": "Electrica",
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -61,7 +61,7 @@ const productos =[
         "stock": 6,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -74,7 +74,7 @@ const productos =[
         "stock": 12,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -87,7 +87,7 @@ const productos =[
         "stock": 20,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -100,7 +100,7 @@ const productos =[
         "stock": 15,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -113,7 +113,7 @@ const productos =[
         "stock": 13,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -126,7 +126,7 @@ const productos =[
         "stock": 8,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -139,7 +139,7 @@ const productos =[
         "stock": 7,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     },
     {
@@ -152,7 +152,7 @@ const productos =[
         "stock": 4,
         "initial": 1,
         "tipo": "Electrica",
-        "cant. Cuerdas": 6,
+        "Cuerdas": 6,
         "Origen": "Americana",
     }
 ]
@@ -168,7 +168,7 @@ export const getProducts =()=>{
 export const productoDetalleId = (productoId) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(productos.find(productos => productos.id === productoId));
+        resolve(productos.find(productos => productos.id === parseInt(productoId)));
       }, 500);
     });
   };
