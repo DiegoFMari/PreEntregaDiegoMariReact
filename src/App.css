@@ -139,8 +139,8 @@ button {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
 
 }
 
@@ -162,3 +162,18 @@ button {
   display: flex;
   justify-content: space-evenly;
 }
+
+.BtnDetail{
+  border: solid 2px black;
+  border-radius: 6px;
+  
+}
+
+.BtnDetail:hover{
+  background-color: gold;
+  font-size: large;
+  border-radius: 17px;
+  font-weight: bold;
+  color: black;
+}
+

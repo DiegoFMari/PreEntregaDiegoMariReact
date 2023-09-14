@@ -13,12 +13,12 @@ const Item = ({ imagen, marca, modelo, precio, stock, id }) => {
           <h3>{marca}</h3>
           <h4>{modelo}</h4>
           <h2>$ {precio}</h2>
-          <ItemCount
+          {/* <ItemCount
             initial={1}
             stock={stock}
             agregarCarrito={(cantidad) => console.log('cantidad agregada', cantidad)}
-          />
-          <Link to={`/productos/${id}`}>Ver Detalles</Link>
+          /> */}
+          <Link to={`/productos/${id}`} className='BtnDetail'>Ver Detalles</Link>
         </div>
       </div>
     </div>

@@ -1,31 +1,40 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../CartContext/CartContext';
 
 const ItemDetail = ({ producto }) => {
+  const [quantiyAdded, setquantiyAdded]=useState('')
+  const { addItem } = useContext(CartContext);
+  
+  const onAdd = (cantidad) => {
+    setquantiyAdded(cantidad)
+    addItem(producto, cantidad);
+  };
+
+  
   if (!producto) {
     return null;
   }
 
-  const { id, marca, modelo, color, precio, stock, tipo, origen, Cuerdas, imagen } = producto;
+  const { marca, modelo, color, precio, stock, tipo, Cuerdas, imagen } = producto;
+  
 
   return (
     <div className="ItemDetailDiv">
       <div className="divDetail">
-      <div className="ItemDivImg">
+        <div className="ItemDivImg">
           <img src={imagen} alt={modelo} />
         </div>
-        <h3>{marca}</h3>
-        <h4>{modelo}</h4>
+        <h3>Marca: {marca}</h3>
+        <h4>Modelo: {modelo}</h4>
         <h2>$ {precio}</h2>
-        <h2>{color}</h2>
-        <h2>{Cuerdas}</h2>
-        <h2>{id}</h2>
-        <h2>{tipo}</h2>
-        <h2>{origen}</h2>
+        <h2>Color: {color}</h2>
+        <h2>Cantidad de Cuerdas: {Cuerdas}</h2>
+        <h2>Tipo: {tipo}</h2>
         <ItemCount
           initial={1}
           stock={stock}
-          agregarCarrito={(cantidad) => console.log('cantidad agregada', cantidad)}
+          agregarCarrito={(cantidad) => onAdd(cantidad)}
         />
       </div>
     </div>

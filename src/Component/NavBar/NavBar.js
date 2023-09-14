@@ -2,25 +2,27 @@ import CartWidget from '../CartWidget/CartWidget';
 import Logo from './assets/IconoNavBar.png'
 import { NavLink } from "react-router-dom"
 
-const NavBar =()=>{
+const NavBar = () => {
     return (
         <nav className="divNavBar">
-               <NavLink to="/">
+            <NavLink to="/">
                 <img src={Logo} alt="iconoLogo" className="IconoLogo" />
             </NavLink>
             <div className='divLogoSlogan'>
-            <h3>Guitar House</h3>
+                <h3>Guitar House</h3>
             </div>
             <div className='buttonNavBar'>
-            <NavLink to={`/category/Fender`} className={({isActive})=> isActive ? "ActiveOption" : "Option"}>Fender</NavLink>
-            <NavLink to={`/category/Gibson`} className={({isActive})=> isActive ? "ActiveOption" : "Option"}>Gibson</NavLink>
-            <NavLink to={`/category/Ibanez`} className={({isActive})=> isActive ? "ActiveOption" : "Option"}>Ibanez</NavLink>
-            <NavLink to={`/category/Krammer`} className={({isActive})=> isActive ? "ActiveOption" : "Option"}>Krammer</NavLink>
-            <NavLink to={`/category/Texas`} className={({isActive})=> isActive ? "ActiveOption" : "Option"}>Texas</NavLink>
-            <NavLink to={`/category/Epiphone`} className={({isActive})=> isActive ? "ActiveOption" : "Option"}>Epiphone</NavLink>
+                <NavLink to="/category/Fender" className="Option">Fender</NavLink>
+                <NavLink to="/category/Gibson" className="Option">Gibson</NavLink>
+                <NavLink to="/category/Ibanez" className="Option">Ibanez</NavLink>
+                <NavLink to="/category/Krammer" className="Option">Krammer</NavLink>
+                <NavLink to="/category/Texas" className="Option">Texas</NavLink>
+                <NavLink to="/category/Epiphone" className="Option">Epiphone</NavLink>
             </div>
             <div className="carrito">
-            <CartWidget />
+                <NavLink to="/Cart">
+                    <CartWidget />
+                </NavLink>
             </div>
         </nav>
     );
