@@ -5,7 +5,6 @@ import ItemDetailContainer from './Component/ItemDetailContainer/ItemDetailConta
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './Component/CartContext/CartContext';
 import Cart from './Component/Cart/Cart';
-import { db } from './Firebase/firebase';
 import Checkout from './Component/Checkout/Checkout';
 
 function App() {
@@ -15,8 +14,8 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path="/" element={<ItemListContainer greeting="Bienvenido a la tienda" />} />
-            <Route path="/category/:categoryID" element={<ItemListContainer greeting="Bienvenido a la tienda!" />} />
+            <Route path="/" element={<ItemListContainer greeting="Musica, Musica, Siempre."/>} />
+            <Route path="/category/:categoryID" element={<ItemListContainer greeting="Listo para tu proxima compañera?" className="greeting" />} />
             <Route path="/productos/:itemId" element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
             <Route path="*" element={<h1>404 NOT FOUND</h1>} />

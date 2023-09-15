@@ -2,10 +2,10 @@ import { useContext, useState } from "react"
 import { CartContext } from "../CartContext/CartContext";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../Firebase/firebase";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
     const [user, setUser] = useState({});
-    const [validarMail, setValidarMail] = useState('');
     const [pedidoID, setPedidoID]=useState('')
     const {cart, total, clear} = useContext(CartContext)
     const datosCompra = (e) => {
@@ -34,19 +34,26 @@ const Checkout = () => {
             .catch((error)=>console.error(error))
         }
     }
-    console.log(user);
+    ;
 
     return (
        <div>
         {pedidoID !==''
-        ?<div>
+        ?<div className="finish0">
+            <div className="finishBuy">
             <h1>FELICITACIONES!</h1>
             <h4>Tu Compra fue realizada</h4>
-            <h3>segui tu pedido con este id {pedidoID}</h3>
+            <h3>Sigue tu pedido con esta ID {pedidoID}</h3>
+
+            </div>
+            <div className="backHome">
+            <Link to="/" >Volver al HOME</Link>
+
+            </div>
         </div>
-        : <div>
-        <h1>Finalizar Compra</h1>
-        <h5>Completa con tus datos!</h5>
+        : <div className="divForum0">
+        <h1 className="h1forum">Finalizar Compra</h1>
+        <h5 className="h5forum">Completa con tus datos!</h5>
         <form onSubmit={finalizarCompra}>
             <div className="divForum1">
                 <label>Nombre Completo=</label>
@@ -63,6 +70,8 @@ const Checkout = () => {
             <div className="divForum1">
                 <label>Repite Mail=</label>
                 <input className="datosForm" type="email" placeholder="Repite tu E-mail" name="repiteMail" />
+            </div>
+            <div>
                 <button>Terminar Compra</button>
             </div>
         </form>

@@ -16,11 +16,11 @@ const ItemDetailContainer = () => {
         if (response.exists()) {
           setProducto({ id: itemId, ...response.data() });
         } else {
-          console.log("No se encontró el producto.");
+          <h1>No se Encontro Producto</h1>;
         }
       })
       .catch((error) => {
-        console.error(error);
+        <h1>404 NOT FOUND</h1>
       });
   }, [itemId]);
 

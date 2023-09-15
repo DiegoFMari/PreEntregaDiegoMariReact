@@ -7,11 +7,15 @@ const Cart = () => {
   const { cart, clear, total } = useContext(CartContext);
 
   return (
-    <div>
+    <div className="divCart">
       {cart.length ? (
-        <div>
-            {cart.map((item)=> <CartItem key={item.id} item={item}/>)}
+        <div className="divBtnCart">
+          <div className="divCardCart">
+          {cart.map((item) => <CartItem key={item.id} item={item} />)}
+          </div>
+          <div className="totalCart">
           <p>Total a pagar: $ {total()}</p>
+          </div>
           <div>
             <button className="btnVaciar" onClick={clear}>
               Vaciar Carrito
@@ -22,9 +26,13 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div>
-          <h3>Tu Carrito Está Vacío!</h3>
+        <div className="cartVacio0">
+          <div>
+          <h3 className="carritoVacio1">Tu Carrito Está Vacío!</h3>
+          </div>
+          <div className="btnCartVacio">
           <Link to="/">Ir a Comprar</Link>
+          </div>
         </div>
       )}
     </div>

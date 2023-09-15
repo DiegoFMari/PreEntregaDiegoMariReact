@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+
+Hola! Mi nombre es Diego Fernando Mari, y este es mi entrega final para el curso de React JS en Coderhouse.
+Mi intencion en este proyecto fue juntar mis dos pasiones, la musica y la informatica. Tomando como modelo la musica, las gutarras para formar un E-Comerce.
+Se que el camino es largo y mi necesito mejorar en muchos aspectos, pero esto me apasiona y se que lo voy a lograr.
+Les dejo un cordial saludo esperando que este proyecto cumpla con las expectativas requeridas.
+Dede ya quiero agradecer toda la dedicacion de profesor y tutores!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
